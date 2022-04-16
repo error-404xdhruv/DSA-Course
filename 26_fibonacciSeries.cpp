@@ -1,3 +1,4 @@
+// iterative method
 #include <iostream>
 #include <cstdio>
 #include <cstring>
