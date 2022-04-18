@@ -22,7 +22,6 @@ int main(int argc, char const *argv[])
         count++ ;
     }
     cout << sum << endl ;
-
-
+    
     return 0;
 }
