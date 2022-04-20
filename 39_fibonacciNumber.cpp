@@ -3,7 +3,7 @@
 #include <cstdio>
 using namespace std ;
 
-int fibonacci(int n)
+int fibonacci(int n) // used recursion (though he has not tought it till now)
 {
     if (n == 1)
     {
