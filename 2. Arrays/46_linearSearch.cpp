@@ -14,12 +14,13 @@ bool yesNo (int array[], int x)
     }
     return 0 ;
 }
-int findIndex (int array[], int elem)
+// linear search function (checks every element of the array to find the key, so become sometimes very slow in case of large array, but its quite easy comparatively)
+int findIndex (int array[], int key)
 {
     int index = 0;
     for (int i = 0; i < 10; i++)
     {
-        if (elem == array[i])
+        if (key == array[i])
         {
             index = i ;
         }
