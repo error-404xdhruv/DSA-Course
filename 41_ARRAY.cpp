@@ -16,5 +16,15 @@ int main(int argc, char const *argv[])
 
     // finding length of an array
     cout << "Length of custom is: " << sizeof(custom)/sizeof(int) << endl ;
+
+    // character array
+    char alphabets[] = {'a', 'b', 'c', 'd'} ;
+    cout << alphabets[0] << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << alphabets[i] << " " ;
+    }
+    cout << endl ;
+    
     return 0;
 }
