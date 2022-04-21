@@ -1,3 +1,6 @@
+
+// god level pattern question
+
 #include <iostream>
 #include <cstdio>
 using namespace std ;
