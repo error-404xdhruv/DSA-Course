@@ -3,21 +3,32 @@
 
 int findUnique(int *arr, int size)
 {
+    int ans = 0;
     for (int i = 0; i < size; i++)
     {
-        int x = arr[i];
-        int count = 0;
-        for (int j = i+1; j < size; j++)
+        ans = ans ^ arr[i] ;
+    }
+    return ans ;    
+}
+/*
+2nd approach
+int findUnique(int *arr, int size)
+{
+    int count;
+    for (int i = 0; i < size; i++)
+    {
+        count = 0;
+        for (int j = 0; j < size; j++)
         {
-            if (x == arr[j])
+            if (arr[i]==arr[j])
             {
                 count++ ;
             }
         }
-        if (count == 0)
+        if (count == 1)
         {
             return arr[i] ;
         }
     }
-    
 }
+*/
