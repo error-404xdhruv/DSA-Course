@@ -27,7 +27,7 @@ int main()
             else
             {
                 int count = n*2 - col + 1;
-                if (col-row>n)
+                if (col-n > row)
                 {
                     cout << count << " " ;
                 }
