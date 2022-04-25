@@ -1,40 +1,35 @@
-
-// Reverse Array
-#include <iostream>
-#include <cstdio>
+// Reverse an Array
+#include <bits/stdc++.h>
 using namespace std ;
 
-void reverseArray(int array[] , int size)
+void doReverse(int array[], int size)
 {
-    int start = 0, end = size-1;
-    while (start <= end)
+    int start = 0 , end = size-1 ;
+    while (start<end)
     {
         swap(array[start], array[end]) ;
-        start++ , end-- ;
+        start++ ;
+        end-- ;
     }
 }
-
-int main(int argc, char const *argv[])
+void printArray(int array[], int size)
 {
-    int array[100] = {1, 2, 3, 4, 5, 6};
-    int array2[100] = {1, 2, 3, 4, 5, 6, 7, 8, 9} ;
-    cout << "Original Array: " << "\n" ;
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < size; i++)
     {
         cout << array[i] << " " ;
     }
-    cout << "\n" ;
-    reverseArray (array, 6) ;
-    cout << "Reversed Array: " << "\n" ;
-    for (int i = 0; i < 6; i++)
+    cout << endl ;
+}
+int main()
+{
+    int array[1000] ;
+    int size; 
+    cin >> size ;
+    for (int i = 0; i < size; i++)
     {
-        cout << array[i] << " " ;
+        cin >> array[i] ;
     }
-    reverseArray(array2, 9) ;
-    cout << "Reversed Array: " << "\n" ;
-    for (int i = 0; i < 9; i++)
-    {
-        cout << array2[i] << " " ;
-    }
+    doReverse(array, size) ;
+    printArray(array, size);
     return 0;
 }
