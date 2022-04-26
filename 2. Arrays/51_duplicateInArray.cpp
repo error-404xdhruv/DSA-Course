@@ -2,45 +2,42 @@
 // https://www.codingninjas.com/codestudio/problems/duplicate-in-array_893397
 // Duplicate In Array
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std ;
 
-void doWork()
+void doWork (int array[], int n)
 {
-    int arr[100000];
-    int N;
-    cin >> N;
-    for (int i = 0; i < N; i++)
+    for (int i = 0; i < n; i++)
     {
-        cin >> arr[i] ;
-    }
-    for (int i = 0; i < N; i++)
-    {
-        int count = 0;
-        for (int j = 0; j < N; j++)
+        for (int j = i+1; j < n; j++)
         {
-            if (arr[i]==arr[j])
+            if (array[i]==array[j])
             {
-                count++;
+                cout << array[i] << endl ;
             }
         }
-        if (count>1)
-        {
-            cout << arr[i] << endl;
-            break;
-        }
     }
+    
 }
 
 int main()
 {
-    int T;
-    cin >> T;
-    for (int i = 0; i < T; i++)
+    int t;
+    cin >> t ;
+    for (int i = 0; i < t; i++)
     {
-        doWork();
+        int array[100000] ;
+        int n ;
+        cin >> n ;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> array[i] ;
+        }
+        doWork(array, n) ;
+        
     }
     
+
     return 0;
 }
 
