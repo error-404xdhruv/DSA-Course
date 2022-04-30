@@ -19,7 +19,6 @@ int binarySearch(int array[], int n, int key)
         {
             e = mid-1 ;
         }
-        mid = s + (e-s)/2 ;
     }
     return -1 ;
 
