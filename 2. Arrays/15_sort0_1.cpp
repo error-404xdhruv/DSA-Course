@@ -25,6 +25,9 @@ int main()
         cin >> array[i] ;
     }
     sort (array, array+(n-1)) ;
+    // we can also use the function in this way for both array and strings
+    // sort(wrong.begin(), wrong.end()) ;
+
     for (int i = 0; i < n; i++)
     {
         cout << array[i] << " ";
