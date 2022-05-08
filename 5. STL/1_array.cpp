@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
-#include <array>
+// if we use #include <iostream> then we need to include an header file for each STL like for seperate for array, sepearate for vectors,etc. but since we are using bits header file it would take care of all the header files needed for most of the programs
+// #include <array>
 
 using namespace std;
 
