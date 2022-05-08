@@ -16,7 +16,7 @@ int main()
     cout << "Element at index 2 --> " << a.at(2) << endl;
 
     cout << "Is the array empty ? " << a.empty() << endl;
-
+    // a.empty() is a bool function which returns either 0 or 1 ;
     cout << "First Element : " << a.front() << endl;
     cout << "Last Element : " << a.back() << endl;
 
