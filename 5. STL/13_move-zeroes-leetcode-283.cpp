@@ -3,31 +3,27 @@ using namespace std ;
 
 int main()
 {
-    vector <int> arr ;
-    int n ;
+    vector<int> arr ;
+    int n, x;
     cin >> n ;
     for (int i = 0; i < n; i++)
     {
-        int a;
-        cin >> a ;
-        arr.push_back(a) ;
+        cin >> x ;
+        arr.push_back(x) ;
     }
+    int a = 0;
     for (int i = 0; i < n; i++)
     {
-        if (arr[i]==0)
+        if (arr[i]!=0)
         {
-            swap(arr[i], arr[i+1]) ;
+            swap(arr[a], arr[i]) ;
+            a++ ;
         }
-        else
-        {
-            continue;
-        }
-        
         
     }
     for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " " ;
+        cout << arr.at(i) << " " ;
     }
     cout << endl ;
 
