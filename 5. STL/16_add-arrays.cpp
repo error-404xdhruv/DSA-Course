@@ -1,6 +1,10 @@
 
 // https://www.geeksforgeeks.org/add-two-numbers-represented-by-two-arrays/?ref=gcse
 
+// TC : O(n+m) 
+// SC : O(max(n,m))
+
+
 #include <bits/stdc++.h>
 using namespace std ;
 
@@ -63,6 +67,5 @@ int main()
         cout << printSum(b, a, m , n) << endl ;
     }
     
-
     return 0;
 }
