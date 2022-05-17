@@ -1,5 +1,6 @@
 
 // https://leetcode.com/problems/search-a-2d-matrix/
+// TC = O(log(row*col))
 
 class Solution
 {
