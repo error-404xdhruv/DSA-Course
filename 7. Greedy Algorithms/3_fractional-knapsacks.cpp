@@ -1,3 +1,6 @@
+
+// https://www.interviewbit.com/blog/fractional-knapsack-problem/
+
 #include <bits/stdc++.h>
 #define l long long
 #define vl vector<long long>
