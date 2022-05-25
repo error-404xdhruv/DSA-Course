@@ -13,7 +13,7 @@ public:
             {
                 return false ;
             }
-            
+
         }
         return true ;
     }
@@ -31,7 +31,86 @@ public:
     }
 }; */
 
+/*
+Statement :
+Given an integer n, return the number of prime numbers that are strictly less than n.
+*/
 
 // Approach 2
 // Sieve of Eratosthenes
+/*
+#include <bits/stdc++.h>
+#define l long long
+#define vl vector<long long>
+#define vi vector<int>
+#define vp vector<vector<int>>
+using namespace std ;
 
+void doAlgo(int n)
+{
+    // so we have to create a bool array and intialise all its value with true
+    bool prime[n+1] ;
+    // memset is used to copy a value to all the index of an array
+    memset (prime, true, sizeof(prime)) ;
+
+    for (int i = 2; i*i <= n; i++)
+    {
+        if (prime[i]==true)
+        {
+            for (int j =i*i; j <= n; j+=i)
+            {
+                prime[j] = false ;
+            }
+        }
+    }
+    int count =  0;
+    for (int i = 2; i <= n ; i++)
+    {
+        if (prime[i])
+        {
+            count++ ;
+        }
+
+    }
+    cout << count << endl ;
+
+}
+
+int main()
+{
+    int n ;
+    cin >> n ;
+    doAlgo(n) ;
+
+    return 0;
+}
+ */
+
+class Solution
+{
+public:
+    int countPrimes(int n)
+    {
+        bool prime[n + 1];
+        memset(prime, true, sizeof(prime));
+        for (int i = 2; i < n; i++)
+        {
+            if (prime[i] == true)
+            {
+                for (int j = i * i; j < n; j += i)
+                {
+                    prime[j] = false;
+                }
+            }
+        }
+        int count = 0;
+        for (int i = 2; i < n; i++)
+        {
+            if (prime[i] == true)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+};
