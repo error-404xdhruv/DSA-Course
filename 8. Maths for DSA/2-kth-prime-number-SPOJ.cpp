@@ -1,51 +1,50 @@
 
-// https://www.spoj.com/problems/TDKPRIME/
+// Status: Runtime Error
 
 #include <bits/stdc++.h>
 #define l long long
-#define vl vector<long long>
-#define vi vector<int>
-#define vp vector<vector<int>>
-using namespace std;
+#define vl vector<long long> 
+#define vi vector<int> 
+#define vp vector<vector<int>> 
+using namespace std ;
 
-l doAlgo(l index)
+vl v ;
+bool isPrime (l n)
 {
-    l n = 5000000;
-    l primes[n];
-    bool prime[n + 1];
-    memset(prime, true, sizeof(prime));
-    for (l i = 2; i < n; i++)
+    for (l i = 2; i*i <= n; i++)
     {
-        if (prime[i])
+        if (n%i == 0)
         {
-            for (l j = i * i; j <= n; j += i)
-            {
-                prime[j] = false;
-            }
+            return false ;
         }
     }
-    l count = 1;
-    for (l i = 2; i <= n; i++)
+    return true ;
+}
+
+void storePrime ()
+{
+    v.push_back(2) ;
+    v.push_back(3) ;
+    for (l i = 4; i <= 5000000; i++)
     {
-        if (prime[i])
+        if (isPrime(i))
         {
-            primes[count] = i;
-            count++;
+            v.push_back(i) ;
         }
     }
-    return primes[index] ;
 }
 
 int main()
 {
-    l q;
-    cin >> q;
+    l q ;
+    cin >> q ;
     while (q--)
     {
-        l a;
-        cin >> a;
-        cout << doAlgo(a) << endl;
+        l n ;
+        cin >> n ;
+        cout << v[n-1] << endl ;
     }
+    
 
     return 0;
 }
