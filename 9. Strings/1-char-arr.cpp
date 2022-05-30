@@ -48,8 +48,6 @@ int main()
     // reverse a char array permanently
     reverseStr (arr, size) ;
     cout << arr << "\n" ;
-
     
-
     return 0;
 }
