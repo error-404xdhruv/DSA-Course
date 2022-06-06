@@ -1,5 +1,7 @@
 
-// using fuctional approach
+// using functional approach
+// TC: O(n)
+// SC: O(n)
 
 #include <bits/stdc++.h>
 #define l long long
