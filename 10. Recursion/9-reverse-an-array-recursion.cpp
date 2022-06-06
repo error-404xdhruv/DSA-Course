@@ -26,3 +26,5 @@ int main()
 
     return 0;
 }
+
+// instaed of taking s and e we can also take s and n-s-1 
