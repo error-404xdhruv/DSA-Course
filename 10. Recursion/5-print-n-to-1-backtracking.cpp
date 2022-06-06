@@ -13,7 +13,6 @@ void print(int i, int n)
     }
     print(i+1, n) ;
     cout << i << endl ;
-    
 }
 
 int main()
