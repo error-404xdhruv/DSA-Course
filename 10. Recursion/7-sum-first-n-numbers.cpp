@@ -1,6 +1,5 @@
 
-// using parameterised recursion
-
+// using functional approach
 #include <bits/stdc++.h>
 #define l long long
 #define vl vector<long long> 
@@ -8,21 +7,21 @@
 #define vp vector<vector<int>> 
 using namespace std ;
 
-void doSum (int i, int sum)
+int printSum (int n)
 {
-    if (i < 1)
+    // making base condition
+    if (n==0)
     {
-        cout << sum << endl ;
-        return ; 
+        return 0 ;
     }
-    doSum(i-1, sum+i) ;
+    return n + printSum(n-1) ;    
 }
 
 int main()
 {
-    int n ;
+    int n;
     cin >> n ;
-    doSum (n, 0) ;
+    cout << printSum(n) << endl ;
 
     return 0;
 }
