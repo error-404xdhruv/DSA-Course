@@ -1,5 +1,6 @@
 
 // using functional approach
+
 #include <bits/stdc++.h>
 #define l long long
 #define vl vector<long long> 
