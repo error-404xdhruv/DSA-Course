@@ -10,17 +10,19 @@ int main()
     }
 
     // sort in increasing order
-    sort (arr, arr+5) ;
+    sort(arr, arr + 5);
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
-    }cout << endl ;
-    
+    }
+    cout << endl;
+
     // sort in decreasing order
     sort(arr, arr + 5, greater<int>());
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
-    }cout << endl ;
+    }
+    cout << endl;
     return 0;
 }
