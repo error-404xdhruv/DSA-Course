@@ -17,5 +17,7 @@ int main()
     int *ptr1 = NULL ;
     // It should be noted that NULL pointer is different from an uninitialized and dangling pointer. In a specific program context, all uninitialized or dangling or NULL pointers are invalid but NULL is a specific invalid pointer which is mentioned in C standard and has specific purposes. What we mean is that uninitialized and dangling pointers are invalid but they can point to some memory address that may be accessible through the memory access is unintended.
 
+    
+
     return 0;
 }
