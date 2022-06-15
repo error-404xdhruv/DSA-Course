@@ -9,7 +9,7 @@ int main()
 {
     int num = 10 ;
     // * operator is used to declare a pointer and & operator stands for the address of the variable
-    // if you dont want to intialise a pointer but want to declare it then you can use zero a that moment (this is known as null pointer)
+    // if you dont want to intialise a pointer but want to declare it then you can use zero at that moment (this is known as null pointer)
     int *ptr = &num ;
     cout << ptr << endl ;
     
