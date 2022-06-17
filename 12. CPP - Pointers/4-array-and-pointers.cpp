@@ -25,5 +25,22 @@ int main()
     cout << "3rd Element: " << 2 [arr] << endl;
     cout << "3rd Element: " << *(2 + ptr) << endl;
 
+    cout << sizeof(arr) << ' ' << sizeof(ptr) << ' ' << sizeof(*ptr) << endl;
+
+    // both would be different
+    cout << &ptr << " " << &arr[0] << endl ;
+
+    int arr2[] = {1, 2, 3} ;
+    int *samplePtr = &arr2[0] ;
+
+    // error
+    // arr2 = arr2 + 1 ;
+    // i.e., we cannot change the address of some element of an array, but we can do the same with pointers
+
+    cout << int(samplePtr) << endl ;
+    
+    samplePtr += 1 ;
+    cout << int(samplePtr) << endl ;
+
     return 0;
 }
