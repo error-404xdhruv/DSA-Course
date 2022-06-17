@@ -39,6 +39,7 @@ int main()
 
     cout << int(samplePtr) << endl ;
     
+    // now there would be 1* (sizeof(datatype of samplePtr)) added to samplePtr ;
     samplePtr += 1 ;
     cout << int(samplePtr) << endl ;
 
