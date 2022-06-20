@@ -12,6 +12,8 @@ int main()
     cout << "Address of first element of arr is : " << &arr[0] << endl;
 
     int *ptr = &arr[0];
+    cout << "1st Element: " << *(arr) << endl ;
+    cout << "3rd Element: " << *(arr + 3) << endl ;
     cout << "3rd Element: " << *(ptr + 2) << endl;
     cout << "1st Element + 3 is : " << *ptr + 3 << endl;
 
