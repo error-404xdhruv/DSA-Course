@@ -10,6 +10,7 @@ int main()
     int arr[10] = {2, 4, 6};
     cout << "Address of first element of arr is : " << arr << endl;
     cout << "Address of first element of arr is : " << &arr[0] << endl;
+    cout << "Address of second element of arr is : " << (arr + 1) << endl ;
 
     int *ptr = &arr[0];
     cout << "1st Element: " << *(arr) << endl ;
