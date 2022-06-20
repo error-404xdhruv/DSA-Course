@@ -13,5 +13,12 @@ int main()
     cout << int(++ptr) << endl;
     // notice the output , we would get a difference of 4 in both the output , which is because we are changing the value stored at ptr and not at *ptr, value stored at ptr is some address and as we know that one int = 4 bits , so if ptr = 100 the ptr +1 would be 104
 
+    // important property
+    
+    int var = 6 ;
+    int *ptr1 = &var ;
+    int *ptr2 = ptr1 ;
+    cout << ++(*ptr2) << endl;
+
     return 0;
 }
