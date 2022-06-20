@@ -25,3 +25,8 @@ We can apply the above two rules to guess all
 
 ++*ptr is treated as ++(*ptr)
 */
+
+/* 
+Explanation:
+dekho phle *ptr wo 0 pr point krega , then *ptr++ or *(ptr++) isase wo ptr = ptr +1 yaani ab 1 pr point krega aage ka simple hain
+*/
