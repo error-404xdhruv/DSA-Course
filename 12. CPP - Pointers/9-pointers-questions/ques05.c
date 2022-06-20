@@ -2,8 +2,8 @@
 #include <stdio.h>
 int main()
 {
-    int a[][3] = {1, 2, 3, 4, 5, 6};
-    int(*ptr)[3] = a;
+    int a[][4] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int(*ptr)[4] = a;
     printf("%d %d ", (*ptr)[1], (*ptr)[2]);
     ++ptr;
     printf("%d %d\n", (*ptr)[1], (*ptr)[2]);
