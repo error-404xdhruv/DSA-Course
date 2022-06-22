@@ -24,6 +24,11 @@ void printSubsequences (vi arr , int index , vi &subarr, int n)
     else
     {
         subarr.push_back(arr[index+1]) ;
+
+        printSubsequences(arr, index+1, subarr, n) ;
+
+        subarr.pop_back() ;
+        printSubsequences(arr, index + 1, subarr, n);
     }
     
     
