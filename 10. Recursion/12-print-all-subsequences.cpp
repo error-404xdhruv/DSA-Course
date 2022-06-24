@@ -1,51 +1,50 @@
 #include <bits/stdc++.h>
 #define l long long
-#define vl vector<long long> 
-#define vi vector<int> 
-#define v2 vector<vector<int>> 
-using namespace std ;
+#define vl vector<long long>
+#define vi vector<int>
+#define v2 vector<vector<int>>
+using namespace std;
 
-void printSubsequences (vi arr , int index , vi &subarr, int n)
+void printSubsequences(vi arr, int index, vi &subarr, int n)
 {
     if (index == n)
     {
-        for (auto x: subarr)
+        for (auto x : subarr)
         {
             cout << x << " ";
         }
-        if (subarr.size()==0)
+        if (subarr.size() == 0)
         {
-            cout << "{ }" ;
+            cout << "{ }";
         }
-        cout << "\n" ;
+        cout << "\n";
 
-        return ;
+        return;
     }
     else
     {
-        subarr.push_back(arr[index+1]) ;
+        subarr.push_back(arr[index + 1]);
 
-        printSubsequences(arr, index+1, subarr, n) ;
+        printSubsequences(arr, index + 1, subarr, n);
 
-        subarr.pop_back() ;
+        subarr.pop_back();
         printSubsequences(arr, index + 1, subarr, n);
     }
-    
-    
 }
 
 int main()
 {
-    int n ; cin>> n ;
-    vi v ; 
+    int n;
+    cin >> n;
+    vi v;
     for (int i = 0; i < n; i++)
     {
-        cin >> v[i] ;
+        cin >> v[i];
     }
-    
-    vi subarr ;
+
+    vi subarr;
     // according to the recursion tree, we would start from index 0
-    printSubsequences(v, 0, subarr, n) ;
+    printSubsequences(v, 0, subarr, n);
 
     return 0;
 }
