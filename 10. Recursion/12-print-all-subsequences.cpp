@@ -31,12 +31,18 @@ void f(int arr[], int idx, vi subarr, int n)
 
 int main()
 {
-    int arr[] = {3, 1, 2};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    cout << "\n";
     vi v;
 
     // empty subsequence
-    cout << "{ }" << endl ;
+    cout << "{ }" << endl;
 
     f(arr, 0, v, n);
 
