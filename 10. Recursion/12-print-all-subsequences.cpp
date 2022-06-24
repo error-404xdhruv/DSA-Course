@@ -5,46 +5,40 @@
 #define v2 vector<vector<int>>
 using namespace std;
 
-void printSubsequences(vi arr, int index, vi &subarr, int n)
+void f(int arr[], int idx, vi subarr, int n)
 {
-    if (index == n)
+    // base condition
+    if (idx == n)
     {
+        // print subarr
         for (auto x : subarr)
         {
             cout << x << " ";
-        }
-        if (subarr.size() == 0)
-        {
-            cout << "{ }";
         }
         cout << "\n";
 
         return;
     }
-    else
-    {
-        subarr.push_back(arr[index + 1]);
 
-        printSubsequences(arr, index + 1, subarr, n);
+    // else we would take the element and increment the index
+    subarr.push_back(arr[idx]);
+    f(arr, idx + 1, subarr, n);
 
-        subarr.pop_back();
-        printSubsequences(arr, index + 1, subarr, n);
-    }
+    // else we can also not take the element and increment the index
+    subarr.pop_back();
+    f(arr, idx + 1, subarr, n);
 }
 
 int main()
 {
-    int n;
-    cin >> n;
+    int arr[] = {3, 1, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
     vi v;
-    for (int i = 0; i < n; i++)
-    {
-        cin >> v[i];
-    }
 
-    vi subarr;
-    // according to the recursion tree, we would start from index 0
-    printSubsequences(v, 0, subarr, n);
+    // empty subsequence
+    cout << "{ }" << endl ;
+
+    f(arr, 0, v, n);
 
     return 0;
 }
