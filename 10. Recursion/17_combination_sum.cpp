@@ -7,6 +7,33 @@
 #define v2 vector<vector<int>>
 using namespace std;
 
+void combinationSum(vi arr, int n, int ind, int k, vi ans)
+{
+    if (ind == n)
+    {
+        if (k == 0)
+        {
+            for (auto x : ans)
+            {
+                cout << x << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
+
+    // pick up the element
+    if (arr[ind] <= k)
+    {
+        ans.push_back(arr[ind]);
+        k -= arr[ind];
+        combinationSum(arr, n, ind, k, ans);
+        k += arr[ind];
+        ans.pop_back();
+    }
+    combinationSum(arr, n, ind + 1, k, ans);
+}
+
 int main()
 {
     int n;
@@ -34,7 +61,10 @@ int main()
         }
     }
 
-    
+    vi ans;
+
+    // call the function
+    combinationSum(arr, n, 0, k, ans);
 
     return 0;
 }
