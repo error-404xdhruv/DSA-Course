@@ -51,3 +51,52 @@ int main()
 
     return 0;
 }
+
+
+/* 
+// one more method :: made by me
+// printing the number of subsequences with sum k
+#include <bits/stdc++.h>
+#define l long long
+#define vl vector<long long>
+#define vi vector<int>
+#define v2 vector<vector<int>>
+using namespace std;
+
+int count = 0;
+void f(int arr[], int n, int id, int sum, int k)
+{
+    if (id == n)
+    {
+        if (sum == k)
+        {
+            ::count++;
+        }
+        return;
+    }
+
+    // take
+    sum += arr[id];
+    f(arr, n, id + 1, sum, k);
+
+    // not take
+    sum -= arr[id];
+    f(arr, n, id + 1, sum, k);
+}
+
+int main()
+{
+    int arr[100];
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    int k;
+    cin >> k;
+    f(arr, n, 0, 0, k);
+    cout << ::count << endl;
+
+    return 0;
+} */
