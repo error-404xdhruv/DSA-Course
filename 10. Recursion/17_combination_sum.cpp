@@ -27,7 +27,8 @@ void combinationSum(vi arr, int n, int ind, int k, vi ans)
     {
         ans.push_back(arr[ind]);
         k -= arr[ind];
-        combinationSum(arr, n, ind, k, ans);
+        // combinationSum(arr, n, ind, k, ans);
+        combinationSum(arr, n, ind+1, k, ans);
         k += arr[ind];
         ans.pop_back();
     }
@@ -49,7 +50,7 @@ int main()
     // since we have to return the subsequences in non-decreason order we should first sort the array
     sort(arr.begin(), arr.end());
 
-    //  since we have been asked for unique subsequences then we should also remove all the duplicates
+    /* //  since we have been asked for unique subsequences then we should also remove all the duplicates
     vector<int>::iterator it;
     it = arr.begin();
     for (int i = 1; i < arr.size(); i++)
@@ -59,7 +60,7 @@ int main()
             arr.erase(it + i);
             i--;
         }
-    }
+    } */
 
     vi ans;
 
